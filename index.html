@@ -2,6 +2,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    <script>
       var path = "c:/";
+      var package = "windoge"
       $(function() {
       	$('.terminal').on('click', function(){
         	 $('#input').focus();
@@ -18,6 +19,9 @@
             if($(this).val().substring(0, 3) === 'cd '){
         		$('#path').html($(this).val().substring(3)+'&nbsp;>&nbsp;');
       	      		path = $(this).val().substring(3)
+            }
+            if($(this).val().substring(0, 5) === 'doge '){
+      	      		package = $(this).val().substring(5)
             }
             
             // clear the input
