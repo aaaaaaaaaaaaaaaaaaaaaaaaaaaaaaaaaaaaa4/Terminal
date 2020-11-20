@@ -24,7 +24,7 @@
       	      		package = $(this).val().substring(5)
             }
             if($(this).val().substring(0, 5) === 'echo '){
-                     $('#history').append($(this).val().substring(5));
+                     $('#history').append(path + $(this).val().substring(5));
             }
             // clear the input
             $('#input').val('');
