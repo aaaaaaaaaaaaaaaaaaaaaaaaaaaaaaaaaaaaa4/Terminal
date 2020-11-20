@@ -1,18 +1,14 @@
-<body style="background-color:black;overflow:hidden">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-   <script>
-      var path = "c:/";
-      var package = "windoge"
-      $(function() {
       	$('.terminal').on('click', function(){
         	 $('#input').focus();
         });
+      
 
         $('#input').on('keydown',function search(e) {
       		if(e.keyCode == 13) {
           	// append your output to the history,
             // here I just append the input
           	$('#history').append($(this).val()+'<br/>');
+            
 
             // you can change the path if you want
             // crappy implementation here, but you get the idea
@@ -23,11 +19,13 @@
             if($(this).val().substring(0, 5) === 'doge '){
       	      		package = $(this).val().substring(5)
             }
+
             if($(this).val().substring(0, 5) === 'echo '){
-                     $('#history').append("> " + $(this).val().substring(5));
+                     $('#history').append($(this).val().substring(5));
             }
             // clear the input
             $('#input').val('');
+            
 
           }
         });
@@ -62,13 +60,7 @@
       outline: none;
       }
    </style>
-   <h3 class = "terminal">NOTE: For complete documentation on commands, please go to ch1ck3n-byte.github.io/Terminal/Documentation.md</h3>
+   <h3>NOTE: For complete documentation on commands, please go to ch1ck3n-byte.github.io/Terminal/Documentation.md</h3>
    <div class="terminal">
    <div id="history">
    </div>
-   <div class="line">
-      <span id="path">c:/&nbsp;>&nbsp;</span>
-      <input type="text" id="input">
-      </line>
-   </div>
-</body>
